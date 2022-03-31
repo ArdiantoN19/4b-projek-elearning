@@ -35,4 +35,4 @@
 - Password : siswa
 
 ### Akses admin
-- Buka link 'localhost/back/admin'
+- Buka link 'localhost/nama file/back/admin/
