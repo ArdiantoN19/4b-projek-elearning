@@ -1,9 +1,9 @@
 <div class="row">
     <div class="col-md-12">
         <div class="d-flex justify-content-between">
-            <h4>Tambah User</h4>
+            <h4>Tambah Siswa</h4>
         </div>
-        <form action="index.php?page=user_store" method="post">
+        <form action="index.php?page=siswa_store" method="post">
             <div class="mb-2">
                 <label for="nama" class="form-label">Nama</label>
                 <input type="text" name="nama" id="nama" class="form-control">

@@ -2,7 +2,7 @@
     <div class="col-md-12">
         <div class="d-flex justify-content-between">
             <h4>Data User</h4>
-            <a href="index.php?page=user_create" class="btn btn-primary">Tambah</a>
+            <a href="index.php?page=siswa_create" class="btn btn-primary">Tambah</a>
         </div>
         <div class="table-responsive">
             <table class="table">
@@ -11,13 +11,13 @@
                         <th>#</th>
                         <th>Nama</th>
                         <th>Username</th>
-                        <th>Level</th>
-                        <th>Aksi</th>
+                        <th>Email</th>
+                        <th>Tingkat</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                    $query = mysqli_query($koneksi, "SELECT * FROM user");
+                    $query = mysqli_query($koneksi, "SELECT * FROM siswa");
                     $no = 1;
                     if (mysqli_num_rows($query) > 0) {
                         foreach ($query as $data) {
@@ -26,11 +26,12 @@
                                 <td><?= $no++ ?></td>
                                 <td><?= $data['nama'] ?></td>
                                 <td><?= $data['username'] ?></td>
-                                <td><?= $data['level'] ?></td>
+                                <td><?= $data['email'] ?></td>
+                                <td><?= $data['tingkat'] ?></td>
                                 <td>
                                     <div class="btn-group">
-                                        <a href="index.php?page=user_edit&id=<?= $data['id'] ?>" class="btn btn-sm btn-warning">Edit</a>
-                                        <a href="index.php?page=user_delete&id=<?= $data['id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data ini ?')">Delete</a>
+                                        <a href="index.php?page=siswa_edit&id=<?= $data['id'] ?>" class="btn btn-sm btn-warning">Edit</a>
+                                        <a href="index.php?page=siswa_delete&id=<?= $data['id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data ini ?')">Delete</a>
                                     </div>
                                 </td>
                             </tr>
